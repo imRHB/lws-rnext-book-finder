@@ -1,11 +1,17 @@
-// import "./App.css";
+import Books from "./components/Books";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 function App() {
     return (
         <>
-            <h2 className="text-5xl font-extrabold text-violet-500 text-center">
-                Book Finder
-            </h2>
+            <Navbar />
+            <main className="my-10 lg:my-14">
+                <Header />
+                <Books />
+            </main>
+            <Footer />
         </>
     );
 }
