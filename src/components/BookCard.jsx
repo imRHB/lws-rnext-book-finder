@@ -1,23 +1,26 @@
-export default function BookCard() {
+/* eslint-disable react/prop-types */
+export default function BookCard({ book }) {
+    const { id, title, author, price, isFavorite, year } = book;
+
     return (
         <div className="space-y-3">
             <div className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4">
                 <img
                     className="max-w-[144px]"
                     src="./assets/book.png"
-                    alt="book name"
+                    alt={title}
                 />
             </div>
 
             <div className="space-y-3">
-                <h4 className="text-lg font-bold lg:text-xl">
-                    JavaScript and Jquery
+                <h4 className="text-lg font-bold lg:text-xl truncate">
+                    {title}
                 </h4>
                 <p className="text-xs lg:text-sm">
-                    By : <span>Jon Duckett</span>
+                    By : <span>{author}</span>
                 </p>
                 <div className="flex items-center justify-between">
-                    <h4 className="text-lg font-bold lg:text-xl">$62</h4>
+                    <h4 className="text-lg font-bold lg:text-xl">${price}</h4>
 
                     <div className="flex items-center space-x-1">
                         <img src="./assets/star.svg" />
