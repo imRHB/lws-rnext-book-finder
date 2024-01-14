@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-export default function BookAction({ sortOrder, setSortOrder }) {
+export default function BookAction({ sortOrder, onSortOrder }) {
     return (
         <div className="flex items-stretch space-x-3">
             <select
@@ -8,7 +8,7 @@ export default function BookAction({ sortOrder, setSortOrder }) {
                 name="sortBy"
                 id="sortBy"
                 value={sortOrder}
-                onChange={() => setSortOrder(event.target.value)}
+                onChange={onSortOrder}
             >
                 <option value="">Sort</option>
                 <option value="name_asc">Name (A-Z)</option>

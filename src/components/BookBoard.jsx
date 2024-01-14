@@ -6,7 +6,7 @@ import Header from "./Header";
 
 export default function BookBoard() {
     const [books, setBooks] = useState(BOOK_LIST);
-    const [sortOrder, setSortOrder] = useState("name_asc");
+    const [sortOrder, setSortOrder] = useState("");
     // name_asc name_desc year_asc year_desc
 
     function handleBookSearch(searchTerm) {
@@ -16,31 +16,6 @@ export default function BookBoard() {
 
         setBooks(searchedBooks);
     }
-
-    function handleSortBook() {
-        const sortedBookList = [...books].sort((a, b) => {
-            const nameA = a.name.toUpperCase();
-            const nameB = b.name.toUpperCase();
-            const yearA = a.year;
-            const yearB = b.year;
-
-            if (sortOrder === "name_asc") {
-                return nameA.localeCompare(nameB);
-            } else if (sortOrder === "name_desc") {
-                return nameB.localeCompare(nameA);
-            } else if (sortOrder === "year_asc") {
-                return yearA - yearB;
-            } else if (sortOrder === "year_desc") {
-                return yearB - yearA;
-            } else {
-                return [...books];
-            }
-        });
-
-        return sortedBookList;
-    }
-
-    handleSortBook();
 
     function handleFavorite(bookId) {
         const bookIndex = books.findIndex((book) => book.id === bookId);
@@ -52,12 +27,38 @@ export default function BookBoard() {
         setBooks(clonedBookList);
     }
 
+    const sortBooks = (orderName) => {
+        const sortedBooks = [...books].sort((a, b) => {
+            switch (orderName) {
+                case "name_asc":
+                    return a.name.localeCompare(b.name);
+                case "name_desc":
+                    return b.name.localeCompare(a.name);
+                case "year_asc":
+                    return a.year - b.year;
+                case "year_desc":
+                    return b.year - a.year;
+                default:
+                    return [...books];
+            }
+        });
+
+        setBooks(sortedBooks);
+    };
+
+    function handleSortOrderChange(evt) {
+        const newSortOrder = evt.target.value;
+        setSortOrder(newSortOrder);
+        sortBooks(newSortOrder);
+    }
+
     return (
         <main className="my-10 lg:my-14">
             <Header
                 onSearch={handleBookSearch}
                 sortOrder={sortOrder}
                 setSortOrder={setSortOrder}
+                onSortOrder={handleSortOrderChange}
             />
             <BookList books={books} onFavorite={handleFavorite} />
         </main>
