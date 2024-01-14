@@ -1,7 +1,7 @@
 export const BOOK_LIST = [
     {
         id: 1,
-        title: "Eloquent JavaScript",
+        name: "Eloquent JavaScript",
         author: "Marijn Haverbeke",
         price: 22.95,
         year: 2018,
@@ -9,7 +9,7 @@ export const BOOK_LIST = [
     },
     {
         id: 2,
-        title: "You Don't Know JS: Scope & Closures",
+        name: "You Don't Know JS: Scope & Closures",
         author: "Kyle Simpson",
         price: 18.99,
         year: 2014,
@@ -17,7 +17,7 @@ export const BOOK_LIST = [
     },
     {
         id: 3,
-        title: "React Up and Running",
+        name: "React Up and Running",
         author: "Stoyan Stefanov",
         price: 29.99,
         year: 2015,
@@ -25,7 +25,7 @@ export const BOOK_LIST = [
     },
     {
         id: 4,
-        title: "Learning React: Modern Patterns for Developing React Apps",
+        name: "Learning React: Modern Patterns for Developing React Apps",
         author: "Alex Banks, Eve Porcello",
         price: 34.99,
         year: 2017,
@@ -33,7 +33,7 @@ export const BOOK_LIST = [
     },
     {
         id: 5,
-        title: "JavaScript: The Good Parts",
+        name: "JavaScript: The Good Parts",
         author: "Douglas Crockford",
         price: 27.99,
         year: 2008,
@@ -41,7 +41,7 @@ export const BOOK_LIST = [
     },
     {
         id: 6,
-        title: "You Don't Know JS: Async & Performance",
+        name: "You Don't Know JS: Async & Performance",
         author: "Kyle Simpson",
         price: 19.99,
         year: 2015,
@@ -49,7 +49,7 @@ export const BOOK_LIST = [
     },
     {
         id: 7,
-        title: "React Design Patterns and Best Practices",
+        name: "React Design Patterns and Best Practices",
         author: "Carlos Santana Roldán",
         price: 39.95,
         year: 2017,
@@ -57,7 +57,7 @@ export const BOOK_LIST = [
     },
     {
         id: 8,
-        title: "Understanding ECMAScript 6",
+        name: "Understanding ECMAScript 6",
         author: "Nicholas C. Zakas",
         price: 24.5,
         year: 2016,
@@ -65,7 +65,7 @@ export const BOOK_LIST = [
     },
     {
         id: 9,
-        title: "React Quickly: Painless web apps with React, JSX, Redux, and GraphQL",
+        name: "React Quickly: Painless web apps with React, JSX, Redux, and GraphQL",
         author: "Azat Mardan",
         price: 31.75,
         year: 2017,
@@ -73,7 +73,7 @@ export const BOOK_LIST = [
     },
     {
         id: 10,
-        title: "You Don't Know JS: ES6 & Beyond",
+        name: "You Don't Know JS: ES6 & Beyond",
         author: "Kyle Simpson",
         price: 21.99,
         year: 2015,
@@ -81,7 +81,7 @@ export const BOOK_LIST = [
     },
     {
         id: 11,
-        title: "React: Up and Running",
+        name: "React: Up and Running",
         author: "Luis Vieira",
         price: 28.5,
         year: 2016,
@@ -89,7 +89,7 @@ export const BOOK_LIST = [
     },
     {
         id: 12,
-        title: "Next.js Quick Start Guide",
+        name: "Next.js Quick Start Guide",
         author: "Ivo Petkov",
         price: 26.95,
         year: 2017,
@@ -97,7 +97,7 @@ export const BOOK_LIST = [
     },
     {
         id: 13,
-        title: "Node.js Design Patterns",
+        name: "Node.js Design Patterns",
         author: "Mario Casciaro",
         price: 36.99,
         year: 2014,
@@ -105,7 +105,7 @@ export const BOOK_LIST = [
     },
     {
         id: 14,
-        title: "Fullstack Open: Deep Dive Into Modern Web Development",
+        name: "Fullstack Open: Deep Dive Into Modern Web Development",
         author: "Matti Luukkainen",
         price: 0.0, // Free online book
         year: 2019,
@@ -113,7 +113,7 @@ export const BOOK_LIST = [
     },
     {
         id: 15,
-        title: "Pro React",
+        name: "Pro React",
         author: "Cassy Athena, Artemij Fedosejev",
         price: 33.25,
         year: 2017,
@@ -121,7 +121,7 @@ export const BOOK_LIST = [
     },
     {
         id: 16,
-        title: "Next.js in Action",
+        name: "Next.js in Action",
         author: "Amit Gupta",
         price: 32.99,
         year: 2019,
@@ -129,7 +129,7 @@ export const BOOK_LIST = [
     },
     {
         id: 17,
-        title: "JavaScript: The Definitive Guide",
+        name: "JavaScript: The Definitive Guide",
         author: "David Flanagan",
         price: 45.5,
         year: 2020,
@@ -137,7 +137,7 @@ export const BOOK_LIST = [
     },
     {
         id: 18,
-        title: "React Native in Action",
+        name: "React Native in Action",
         author: "Nader Dabit",
         price: 30.95,
         year: 2018,
@@ -145,7 +145,7 @@ export const BOOK_LIST = [
     },
     {
         id: 19,
-        title: "Next.js for React Developers",
+        name: "Next.js for React Developers",
         author: "Guillermo Rauch",
         price: 29.95,
         year: 2019,
@@ -153,7 +153,7 @@ export const BOOK_LIST = [
     },
     {
         id: 20,
-        title: "You Don't Know JS: this & Object Prototypes",
+        name: "You Don't Know JS: this & Object Prototypes",
         author: "Kyle Simpson",
         price: 20.99,
         year: 2014,

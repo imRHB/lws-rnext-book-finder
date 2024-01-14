@@ -5,7 +5,7 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import AddToCartButton from "./AddToCartButton";
 
 export default function BookCard({ book, onFavorite }) {
-    const { id, title, author, price, isFavorite, year } = book;
+    const { id, name, author, price, isFavorite, year } = book;
 
     return (
         <div className="space-y-3">
@@ -13,13 +13,13 @@ export default function BookCard({ book, onFavorite }) {
                 <img
                     className="max-w-[144px]"
                     src="./assets/book.png"
-                    alt={title}
+                    alt={name}
                 />
             </div>
 
             <div className="space-y-3">
                 <h4 className="text-lg font-bold lg:text-xl truncate">
-                    {title}
+                    {name}
                 </h4>
                 <p className="text-xs lg:text-sm">
                     By : <span>{author}</span> <span>({year})</span>
