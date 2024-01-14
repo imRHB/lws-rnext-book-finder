@@ -21,7 +21,7 @@ export const BOOK_LIST = [
         author: "Stoyan Stefanov",
         price: 29.99,
         year: 2015,
-        isFavorite: false,
+        isFavorite: true,
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const BOOK_LIST = [
         author: "Alex Banks, Eve Porcello",
         price: 34.99,
         year: 2017,
-        isFavorite: false,
+        isFavorite: true,
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ export const BOOK_LIST = [
         author: "Carlos Santana Roldán",
         price: 39.95,
         year: 2017,
-        isFavorite: false,
+        isFavorite: true,
     },
     {
         id: 8,
