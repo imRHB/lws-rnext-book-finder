@@ -1,3 +1,5 @@
+const logo = "/assets/logo.png";
+
 export default function Navbar() {
     return (
         <nav className="py-6 ">
@@ -5,7 +7,7 @@ export default function Navbar() {
                 <a href="/">
                     <img
                         className="max-w-[100px] md:max-w-[165px]"
-                        src="./assets/lws-logo-en.svg"
+                        src={logo}
                         alt="Lws"
                     />
                 </a>

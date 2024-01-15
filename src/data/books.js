@@ -93,7 +93,7 @@ export const BOOK_LIST = [
         author: "Ivo Petkov",
         price: 26.95,
         year: 2017,
-        isFavorite: false,
+        isFavorite: true,
     },
     {
         id: 13,
@@ -141,7 +141,7 @@ export const BOOK_LIST = [
         author: "Nader Dabit",
         price: 30.95,
         year: 2018,
-        isFavorite: false,
+        isFavorite: true,
     },
     {
         id: 19,
@@ -149,7 +149,7 @@ export const BOOK_LIST = [
         author: "Guillermo Rauch",
         price: 29.95,
         year: 2019,
-        isFavorite: false,
+        isFavorite: true,
     },
     {
         id: 20,

@@ -7,7 +7,6 @@ import Header from "./Header";
 export default function BookBoard() {
     const [books, setBooks] = useState(BOOK_LIST);
     const [sortOrder, setSortOrder] = useState("");
-    // name_asc name_desc year_asc year_desc
 
     function handleBookSearch(searchTerm) {
         const searchedBooks = books.filter((book) =>
@@ -17,7 +16,7 @@ export default function BookBoard() {
         setBooks(searchedBooks);
     }
 
-    function handleFavorite(bookId) {
+    function handleToggleFavorite(bookId) {
         const bookIndex = books.findIndex((book) => book.id === bookId);
         const clonedBookList = [...books];
 
@@ -27,9 +26,9 @@ export default function BookBoard() {
         setBooks(clonedBookList);
     }
 
-    const sortBooks = (orderName) => {
+    function sortBooks(orderValue) {
         const sortedBooks = [...books].sort((a, b) => {
-            switch (orderName) {
+            switch (orderValue) {
                 case "name_asc":
                     return a.name.localeCompare(b.name);
                 case "name_desc":
@@ -39,12 +38,12 @@ export default function BookBoard() {
                 case "year_desc":
                     return b.year - a.year;
                 default:
-                    return [...books];
+                    return [];
             }
         });
 
         setBooks(sortedBooks);
-    };
+    }
 
     function handleSortOrderChange(evt) {
         const newSortOrder = evt.target.value;
@@ -57,10 +56,9 @@ export default function BookBoard() {
             <Header
                 onSearch={handleBookSearch}
                 sortOrder={sortOrder}
-                setSortOrder={setSortOrder}
                 onSortOrder={handleSortOrderChange}
             />
-            <BookList books={books} onFavorite={handleFavorite} />
+            <BookList books={books} onFavorite={handleToggleFavorite} />
         </main>
     );
 }
