@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-export default function BookAction({ sortOrder, onSortOrder }) {
+export default function BookSort({ sortOrder, onSortOrder }) {
     return (
         <div className="flex items-stretch space-x-3">
             <select

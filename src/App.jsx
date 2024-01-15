@@ -1,6 +1,6 @@
-import BookBoard from "./components/BookBoard";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import BookBoard from "./components/book/BookBoard";
+import Footer from "./components/shared/Footer";
+import Navbar from "./components/shared/Navbar";
 
 function App() {
     return (

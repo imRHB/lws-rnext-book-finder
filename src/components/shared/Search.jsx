@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-export default function BookSearch({ onSearch }) {
+export default function Search({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState("");
 
-    function handleClick(evt) {
+    function handleSearch(evt) {
         evt.preventDefault();
 
         onSearch(searchTerm);
@@ -29,7 +29,7 @@ export default function BookSearch({ onSearch }) {
                         <button
                             type="submit"
                             className="mr-1.5 flex items-center space-x-1.5 rounded-md rounded-e-lg bg-[#1C4336] px-4 py-2.5 text-sm text-white"
-                            onClick={handleClick}
+                            onClick={handleSearch}
                         >
                             <svg
                                 className="h-[14px] w-[14px]"

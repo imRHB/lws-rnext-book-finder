@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { BOOK_LIST } from "../data/books";
+import { BOOK_LIST } from "../../data/books";
+import Header from "../Header";
 import BookList from "./BookList";
-import Header from "./Header";
 
 export default function BookBoard() {
     const [books, setBooks] = useState(BOOK_LIST);
@@ -26,9 +26,9 @@ export default function BookBoard() {
         setBooks(clonedBookList);
     }
 
-    function sortBooks(orderValue) {
+    function handleSortBooks(sortOrderValue) {
         const sortedBooks = [...books].sort((a, b) => {
-            switch (orderValue) {
+            switch (sortOrderValue) {
                 case "name_asc":
                     return a.name.localeCompare(b.name);
                 case "name_desc":
@@ -46,9 +46,9 @@ export default function BookBoard() {
     }
 
     function handleSortOrderChange(evt) {
-        const newSortOrder = evt.target.value;
-        setSortOrder(newSortOrder);
-        sortBooks(newSortOrder);
+        const newSortOrderValue = evt.target.value;
+        setSortOrder(newSortOrderValue);
+        handleSortBooks(newSortOrderValue);
     }
 
     return (

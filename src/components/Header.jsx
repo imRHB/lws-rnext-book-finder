@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
-import BookAction from "./BookAction";
-import BookSearch from "./BookSearch";
+import BookSort from "./book/BookSort";
+import Search from "./shared/Search";
 
 export default function Header({ onSearch, sortOrder, onSortOrder }) {
     return (
@@ -15,10 +15,10 @@ export default function Header({ onSearch, sortOrder, onSortOrder }) {
                         Trending Books of the Year
                     </h2>
 
-                    <BookSearch onSearch={onSearch} />
+                    <Search onSearch={onSearch} />
                 </div>
 
-                <BookAction sortOrder={sortOrder} onSortOrder={onSortOrder} />
+                <BookSort sortOrder={sortOrder} onSortOrder={onSortOrder} />
             </div>
         </header>
     );

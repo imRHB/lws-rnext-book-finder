@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "../ui/AddToCartButton";
+import FavoriteButton from "../ui/FavoriteButton";
 import BookRating from "./BookRating";
-import FavoriteButton from "./FavoriteButton";
 
 const bookImg = "/assets/book.png";
 
