@@ -9,7 +9,8 @@ export default function BookBoard() {
     const [sortOrder, setSortOrder] = useState("");
 
     function handleBookSearch(searchTerm) {
-        const searchedBooks = books.filter((book) =>
+        const clonedBookList = [...BOOK_LIST];
+        const searchedBooks = clonedBookList.filter((book) =>
             book.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
